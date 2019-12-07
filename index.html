@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Desi Product Generator</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body{
+                margin: 200px auto 40px;
+                max-width: 85%;
+                line-height:1.6;
+                font-size:18px;
+                color:#444;
+                padding: 0 10px;
+                text-align: center;
+                background-color: white;    
+            }
+
+            header {
+                text-align: center;
+                font-size: 1em;
+            }
+
+            #product {
+                font-size: 3em;
+                margin: 100px auto 70px;
+            }
+
+             a {
+                text-decoration: none;
+            }
+
+            footer {
+                margin-top: 100px;
+                font-size: .6em
+
+            }
+         
+        </style>
+    </head>
+    <body>
+        <header>
+           <b> <font color="#f49330">  Your billion rupees </font><font color="green">desi product is...</font></b>
+        </header>
+        <div id="product">
+        </div>
+        <a href="/" onClick="window.location.reload(); return false;">I want another desi bullshit idea.</a>
+        <footer>
+            <a href="https://twitter.com/cartoonpi">Twitter</a> | <a href="http://www.hatwalne.com">Website</a><br>
+            Original Website <a href="http://bullshitproductgenerator.com">bullshitproductgenerator.com</a> | <a href="https://github.com/steverobbins/bullshit-product-generator"> Original Creator GitHub</a>
+            
+        </footer>
+        <script type="text/javascript">
+            var bullshit = [
+                //'acai berry',
+                //'agave',
+                'almond',
+                //'avocado',
+                'chia seed',
+                'coconut',
+                'fish',
+                //'flax seed',
+                'ginger',
+                'green tea',
+                'hemp seed',
+                //'hemp',
+                'himalayan salt',
+                //'kale',
+                'lemon peel',
+                'matcha green tea',
+                //'miso',
+                'mushroom',
+                //'oyster',
+                'pistachio',
+                'probiotic',
+              //  'quinoa',
+                'Gulab Jaal',
+                'spinach',
+                'turmeric',
+                'wheat grass',
+                //'whey protein',
+                // new my things
+                'curry leaves',
+                'Gow Mutra',
+                'Spice',
+                'Masala',
+                'Authentic Telugu',
+                'Kerala',
+                'Nirmal Baba',
+                'Tulsi',
+                'Tadka',
+                'Neem',
+                'Aryurvedic',
+                'Sun dried',
+                'Vacuum evaporated',
+                'Whole Wheat',
+                'Paan',
+                'Paneer',
+                'Chicken tikka',
+                'Henna',
+                'Mehendi',
+                'Bihar Special',
+                'Pudina',
+                'Pudin hara',
+                'Hajmola',
+                'Tandoori',
+                'Mirchi',
+                'Jadi Booti'
+
+
+            ];
+
+            var bullshitEnhancerChance = 25; // %
+            var bullshitEnhancer = [
+                'essence',
+                'extract',
+                'infused',
+                'oil',
+// new my thing
+                'kadha'
+            ];
+
+            var consumable = [
+                // things you drink
+                'beer',
+                'juice',
+              //  'kombucha',
+                'milk',
+                'soda',
+              //  'tequila',
+                'vodka',
+                'water',
+                'wine',
+
+                // things you use to make things you drink
+                'coffee beans',
+                'tea leaves',
+
+                // things you eat
+                'butter',
+                'chewing gum',
+                'mints',
+
+                // things you rub on yourself
+                'anti aging cream',
+                'body wash',
+                'deodorant',
+                'hair conditioner',
+                'lip balm',
+                'lotion',
+                'moisturizer',
+                'shampoo',
+                'shaving cream',
+                'wrinkle cream',
+
+                // women, am I right?
+                'eye shadow',
+                'face mask',
+                'lipstick',
+              
+
+                // bro
+                'beard cream',
+                'condoms',
+                'moustache wax',
+
+                // people are morons
+                'candles',
+                'dish soap',
+                'mouth wash',
+                'tooth paste',
+                // New thing
+                'Biryani',
+                'Naan',
+                'Papad',
+                'Chutney',
+                'Dosa',
+                'Paratha',
+                'Daatun',
+                'Manjan',
+                'Dhoti',
+                'Saari',
+                'Vada Pav',
+                'Dant Manjan',
+                'Dahi',
+                'Gulab Jamun',
+                'Moquito Repelent',
+                'Anti Septic Cream',
+                'ORS drink'
+
+
+            ];
+
+            var product = bullshit[Math.floor(Math.random() * bullshit.length)];
+            if (Math.floor(Math.random() * 100) + 1 <= bullshitEnhancerChance) {
+                product += ' ' + bullshitEnhancer[Math.floor(Math.random() * bullshitEnhancer.length)];
+            }
+            product += ' ' + consumable[Math.floor(Math.random() * consumable.length)];
+            document.getElementById('product').innerHTML = product.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
+            document.getElementById('beg').innerHTML = product.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
+
+            document.getElementById("year").innerHTML = new Date().getFullYear();
+        </script>
+    </body>
+</html>
